@@ -12,6 +12,9 @@ RSpec.describe Carnival do
     it "has a duration" do 
       expect(@carnival.duration).to eq(7)
     end
-  end
 
+    it "has rides" do 
+      expect(@carnival.rides).to eq([])
+    end
+  end
 end

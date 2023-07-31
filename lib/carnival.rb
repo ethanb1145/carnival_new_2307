@@ -3,6 +3,11 @@ class Carnival
 
   def initialize(duration)
     @duration = duration
+    @rides = []
+  end
+
+  def rides 
+    @rides
   end
 
 end
