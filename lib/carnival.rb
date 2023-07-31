@@ -14,4 +14,8 @@ class Carnival
     @rides << ride
   end
 
+  def total_revenue
+    0
+  end
+
 end
