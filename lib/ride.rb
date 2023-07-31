@@ -17,7 +17,7 @@ class Ride
     @rider_log[visitor] ||= 0
     @rider_log[visitor] += 1
     
-    visitor.spending_money -= @admission_fee
+    visitor.deduct_spending_money(@admission_fee)
   end
 
   def total_revenue
