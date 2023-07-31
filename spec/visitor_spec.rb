@@ -6,19 +6,15 @@ RSpec.describe Visitor do
     expect(@visitor1).to be_a(Visitor)
   end
 
-  describe "#name" do 
+  describe "#initialize" do 
     it "gives the name of the visitor" do 
       expect(@visitor1.name).to eq("Bruce")
     end
-  end
 
-  describe "#height" do 
     it "gives the height of the visitor" do 
       expect(@visitor1.height).to eq(54)
     end
-  end
-
-  describe "#spending_money" do 
+    
     it "gives the spending money of the visitor" do 
       expect(@visitor1.spending_money).to eq(10)
     end
