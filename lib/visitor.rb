@@ -6,4 +6,12 @@ class Visitor
     @height = height
     @spending_money = spending_money
   end
+
+  def preferences
+    @preferences ||= []
+  end
+
+  def add_preference(preference)
+    @preferences << preference
+  end
 end
