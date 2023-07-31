@@ -14,8 +14,15 @@ class Ride
   end
 
   def board_rider(visitor)
-    total_revenue = 0
     @rider_log[visitor] ||= 0
     @rider_log[visitor] += 1
+    
+    @rider_log.each do |visitor|
+      visitor.spending_money -= @admission_fee
+    end
+  end
+
+  def total_revenue
+    @rider_log.values.sum
   end
 end
