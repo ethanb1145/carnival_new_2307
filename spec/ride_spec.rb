@@ -21,7 +21,17 @@ RSpec.describe Ride do
     end
 
     it "gives the excitement of the ride" do 
-      expect(@ride1.excitement).to eq([:gentle])
+      expect(@ride1.excitement).to eq(:gentle)
+    end
+
+    it "gives the rider log of the ride" do 
+      expect(@ride1.rider_log).to eq({})
+    end
+  end
+
+  describe "#total_revenue" do 
+    it "gives the total_revenue of the ride" do 
+      expect(@ride1.total_revenue).to eq(0)
     end
   end
 end
