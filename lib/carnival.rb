@@ -18,4 +18,8 @@ class Carnival
     @rides.sum { |ride| ride.total_revenue}
   end
 
+  def most_popular_ride
+    
+  end
+
 end
