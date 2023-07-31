@@ -19,7 +19,7 @@ class Carnival
   end
 
   def most_popular_ride
-    
+    most_ridden_ride = @rides.max_by { |ride| ride.rider_log.values.sum }
+    most_ridden_ride
   end
-
 end
