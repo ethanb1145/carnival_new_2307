@@ -22,4 +22,9 @@ class Carnival
     most_ridden_ride = @rides.max_by { |ride| ride.rider_log.values.sum }
     most_ridden_ride
   end
+
+  def most_profitable_ride
+    most_profitable_ride = @rides.max_by { |ride| ride.total_revenue}
+    most_profitable_ride
+  end
 end
