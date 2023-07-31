@@ -20,7 +20,7 @@ RSpec.describe Visitor do
 
   describe "#spending_money" do 
     it "gives the spending money of the visitor" do 
-      expect(@visitor1.spending_money).to eq("$10")
+      expect(@visitor1.spending_money).to eq(10)
     end
   end
 
