@@ -15,7 +15,7 @@ class Carnival
   end
 
   def total_revenue
-    rides.map(&:total_revenue).sum
+    @rides.sum { |ride| ride.total_revenue}
   end
 
 end
