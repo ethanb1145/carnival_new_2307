@@ -29,13 +29,7 @@ RSpec.describe Ride do
     end
   end
 
-  describe "#total_revenue" do 
-    it "gives the total_revenue of the ride" do 
-      expect(@ride1.total_revenue).to eq(0)
-    end
-  end
-
-  describe "#board_rider" do 
+  describe "#board_rider, total_revenue" do 
     it "adds a visitor to the ride, takes spending money as revenue" do 
       expect(@ride1.rider_log).to eq({})
 

@@ -18,7 +18,7 @@ RSpec.describe Carnival do
     end
   end
 
-  describe "#add_rides" do
+  describe "#add_ride" do
     it "can add rides" do 
       expect(@carnival.rides).to eq([])
 
@@ -28,4 +28,10 @@ RSpec.describe Carnival do
       expect(@carnival.rides).to eq ([ride2])
     end
   end
+
+  describe "#total_revenue" do 
+  it "gives the total_revenue of the carnival and its rides" do 
+    expect(@carnival.total_revenue).to eq(0)
+  end
+end
 end
