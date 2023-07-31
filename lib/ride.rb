@@ -17,9 +17,7 @@ class Ride
     @rider_log[visitor] ||= 0
     @rider_log[visitor] += 1
     
-    @rider_log.each do |visitor|
-      visitor.spending_money -= @admission_fee
-    end
+    visitor.spending_money -= @admission_fee
   end
 
   def total_revenue
