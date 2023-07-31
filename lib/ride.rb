@@ -14,7 +14,8 @@ class Ride
   end
 
   def board_rider(visitor)
-    @rider_log << visitor
+    @rider_log[visitor] ||= 0
+    @rider_log[visitor] += 1
   end
 
   def total_revenue
