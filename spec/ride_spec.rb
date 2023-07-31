@@ -52,5 +52,19 @@ RSpec.describe Ride do
       expect(visitor2.spending_money).to eq(4)
       expect(@ride1.total_revenue).to eq(3)
     end
+
+    it "preferences, height, and money must meet requirements to be added to ride" do 
+      visitor2 = Visitor.new('Tucker', 36, '$0')
+      ride2 = Ride.new({ name: 'Ferris Wheel', min_height: 36, admission_fee: 5, excitement: :gentle })
+      ride2.board_rider(visitor2)
+
+      expect(ride2.rider_log).to eq ({})
+
+      visitor2 = Visitor.new('Tucker', 36, '$5')
+      ride2 = Ride.new({ name: 'Ferris Wheel', min_height: 36, admission_fee: 5, excitement: :gentle })
+      ride2.board_rider(visitor2)
+
+      expect(ride2.rider_log).to eq ({})
+    end
   end
 end
