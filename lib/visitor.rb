@@ -4,7 +4,7 @@ class Visitor
   def initialize(name, height, spending_money)
     @name = name
     @height = height
-    @spending_money = spending_money.to_i
+    @spending_money = spending_money
     @preferences = []
   end
 
@@ -18,5 +18,9 @@ class Visitor
 
   def tall_enough?(requirement)
     @height >= requirement
+  end
+
+  def spending_money
+    @spending_money.gsub(/\$/, '').to_i
   end
 end
