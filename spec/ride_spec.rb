@@ -65,6 +65,13 @@ RSpec.describe Ride do
       ride2.board_rider(visitor2)
 
       expect(ride2.rider_log).to eq ({})
+
+      visitor2 = Visitor.new('Tucker', 36, '$5')
+      visitor2.add_preference(:gentle)
+      ride2 = Ride.new({ name: 'Ferris Wheel', min_height: 36, admission_fee: 5, excitement: :gentle })
+      ride2.board_rider(visitor2)
+
+      expect(ride2.rider_log).to eq ({visitor2 => 1})
     end
   end
 end
