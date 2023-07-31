@@ -9,7 +9,11 @@ class Ride
   end
 
   def rider_log
-    {}
+    @rider_log ||= {}
+  end
+
+  def board_rider(visitor)
+    
   end
 
   def total_revenue
