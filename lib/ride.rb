@@ -14,10 +14,12 @@ class Ride
   end
 
   def board_rider(visitor)
-    @rider_log[visitor] ||= 0
-    @rider_log[visitor] += 1
+    if visitor.tall_enough?(@min_height) && visitor.preferences.include?(@excitement)
+      @rider_log[visitor] ||= 0
+      @rider_log[visitor] += 1
     
-    visitor.deduct_spending_money(@admission_fee)
+      visitor.deduct_spending_money(@admission_fee)
+    end
   end
 
   def total_revenue
