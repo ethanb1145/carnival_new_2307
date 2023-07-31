@@ -6,14 +6,15 @@ class Ride
     @min_height = ride_info[:min_height]
     @admission_fee = ride_info[:admission_fee]
     @excitement = ride_info[:excitement]
+    @rider_log = {}
   end
 
   def rider_log
-    @rider_log ||= {}
+    @rider_log
   end
 
   def board_rider(visitor)
-    
+    @rider_log << visitor
   end
 
   def total_revenue
